@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Favoritos de {{usuario}}</title>
+</head>
+<body>
+   <h1>
+       Favoritos de {{usuario}}
+   </h1>
+   {% if fav %}
+     <ul>
+      {% for manga in fav %}
+         <li> <a href="https://kitsu.io/api/edge/anime?filter[id]={{manga.id_manga}}/"> {{ manga.id_manga }} </a></li>
+      {% endfor %}
+     <ul>
+   {% else %}
+       <p> Esse usuario nao possui nenhum manga como favorito </p>
+   {% endif %}
+   </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Adicionar Favoritos</title>
+</head>
+
+<body>
+    {%if log%} 
+        <p>Digite o id do manga: </p>
+        <form id="logout-form" method="post"style="display: inline-block">
+            {% csrf_token %}
+            <input type="number" id="Manga" name="Manga" placeholder="Digite o id do manga">
+        </form>
+    {%else%}
+        <p>Nenhum usuario esta logado</p>
+    {%endif%}
+</body>
