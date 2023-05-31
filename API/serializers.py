@@ -35,3 +35,13 @@ class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CustomUser
         fields = '__all__'
+
+class signupSerializer(serializers.ModelSerializer):
+    usuario = serializers.CharField()
+    email = serializers.EmailField()
+    senha1 = serializers.CharField()
+    senha2 = serializers.CharField()
+
+    class Meta:
+        model = models.CustomUser
+        fields = ['usuario', 'email', 'senha1','senha2']

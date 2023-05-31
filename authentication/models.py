@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser
 #usuario
 class CustomUser(AbstractUser):
     ID = models.AutoField(primary_key=True)
-    email = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
     pass
 
 #favoritos
